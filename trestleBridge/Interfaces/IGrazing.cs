@@ -9,6 +9,9 @@ namespace trestleBridge.Interfaces
     public interface IGrazing
     {
         double GrassPerDay { get; set; }
+
+        object Type { get; set; }
+
         void Graze();
     }
 }

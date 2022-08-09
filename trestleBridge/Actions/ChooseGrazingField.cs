@@ -1,4 +1,6 @@
 ﻿using System;
+using trestleBridge.Interfaces;
+
 namespace trestleBridge.Actions
 {
     public class ChooseGrazingField
@@ -12,7 +14,7 @@ namespace trestleBridge.Actions
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?
-            Console.WriteLine($"Place {animal.Type.ToLower()} where?");
+            Console.WriteLine($"Place {animal.Type.ToString().ToLower()} where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
