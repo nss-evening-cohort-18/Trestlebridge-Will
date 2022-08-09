@@ -9,6 +9,7 @@ namespace trestleBridge.Interfaces
     public interface IFlower
     {
         double WaterPerDay { get; set; }
+        string Type { get; set; }
         void Absorb();
     }
 }
