@@ -10,6 +10,7 @@ namespace trestleBridge.Models.Animals
     public class Ostrich : IResource, IGrazing, IMeatProducing
     {
         private Guid _id = Guid.NewGuid();
+        //read me has 3 / 2.6
         private double _meatProduced = 2.6;
 
         private string _shortId
@@ -20,7 +21,7 @@ namespace trestleBridge.Models.Animals
             }
         }
         public double GrassPerDay { get; set; } = 2.3;
-        public string Type { get; } = "Ostrich";
+        public object Type { get; } = "Ostrich";
 
         // Methods
         public void Graze()

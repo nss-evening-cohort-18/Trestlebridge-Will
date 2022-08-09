@@ -7,11 +7,10 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Animals
 {
-    public class Chicken : IResource, IGrazing, IMeatProducing
+    public class Duck : IResource, IGrazing, IMeatProducing
     {
         private Guid _id = Guid.NewGuid();
-        //on the livestock table in the readme it is 7 / .5kg / 1.7kg but i need to check how to do a range
-        private double _meatProduced = 7.5;
+        private double _meatProduced = 6.75;
         private string _shortId
         {
             get
@@ -20,13 +19,13 @@ namespace trestleBridge.Models.Animals
             }
         }
 
-        public double GrassPerDay { get; set; } = 0.9;
-        public object Type { get; } = "Chicken";
+        public double GrassPerDay { get; set; } =0.8;
+        public object Type { get; } = "Duck";
 
         // Methods
         public void Graze()
         {
-            Console.WriteLine($"Chicken {this._shortId} just ate {this.GrassPerDay}kg of feed");
+            Console.WriteLine($"Duck {this._shortId} just ate {this.GrassPerDay}kg of feed");
         }
 
         public double Butcher()
@@ -35,7 +34,8 @@ namespace trestleBridge.Models.Animals
         }
         public override string ToString()
         {
-            return $"Chicken {this._shortId}. Cluck!";
+            return $"Duck {this._shortId}. Quack!";
         }
+
     }
 }

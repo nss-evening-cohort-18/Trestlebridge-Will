@@ -10,7 +10,7 @@ namespace trestleBridge.Interfaces
     {
         double GrassPerDay { get; set; }
 
-        object Type { get; set; }
+        object Type { get;  }
 
         void Graze();
     }
