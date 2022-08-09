@@ -23,13 +23,13 @@ namespace trestleBridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChooseSowingField.CollectInput(farm, new Sesame());
+                    ChooseNaturalField.CollectInput(farm, new Sesame());
                     break;
                 case 2:
-                    ChooseSowingField.CollectInput(farm, new SunFlower());
+                    ChooseNaturalField.CollectInput(farm, new SunFlower());
                     break;
                 case 3:
-                    ChooseSowingField.CollectInput(farm, new WildFlower());
+                    ChooseNaturalField.CollectInput(farm, new WildFlower());
                     break;
                 default:
                     break;

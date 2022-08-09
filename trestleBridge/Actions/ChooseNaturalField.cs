@@ -7,14 +7,14 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Actions
 {
-    internal class ChooseSowingField
+    internal class ChooseNaturalField
     {
         public static void CollectInput(Farm farm, IFlower plant)
         {
             // Console.Clear();
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Sowing Field");
+                Console.WriteLine($"{i + 1}. Natural Field");
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?
@@ -23,7 +23,7 @@ namespace trestleBridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            farm.SowingFields[choice].AddResource(plant);
+            farm.GrazingFields[choice].AddResource(plant);
 
             /*
                 Couldn't get this to work. Can you?
