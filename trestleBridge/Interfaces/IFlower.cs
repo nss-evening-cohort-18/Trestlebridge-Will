@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trestleBridge.Interfaces
 {
-    public interface IFlower
+    public interface IFlower : IResource
     {
         double WaterPerDay { get; set; }
         void Absorb();

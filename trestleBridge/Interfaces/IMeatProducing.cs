@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trestleBridge.Interfaces
 {
-    public interface IMeatProducing
+    public interface IMeatProducing : IResource
     {
         
     }
