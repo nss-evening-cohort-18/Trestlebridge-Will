@@ -16,7 +16,7 @@ namespace trestleBridge.Actions
             {
                 Console.WriteLine($"{i + 1}. Natural Field");
             }
-            for (int i = farm.NaturalFields.Count + 1; i < farm.PlowedFields.Count + farm.NaturalFields.Count + 1; i++)
+            for (int i = farm.NaturalFields.Count; i < farm.PlowedFields.Count + farm.NaturalFields.Count + 1; i++)
             {
                 Console.WriteLine($"{i + 1}. Plowed Field");
             }
