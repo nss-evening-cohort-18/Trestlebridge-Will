@@ -29,11 +29,11 @@ namespace trestleBridge.Actions
 
             if (choice <= farm.NaturalFields.Count)
             {
-                farm.NaturalFields[choice].AddResource(plant);
+                farm.NaturalFields[choice - 1].AddResource(plant);
             }
             else if (choice > farm.NaturalFields.Count)
             {
-                farm.PlowedFields[choice - farm.NaturalFields.Count].AddResource(plant);
+                farm.PlowedFields[choice - farm.NaturalFields.Count - 1].AddResource(plant);
             }
 
             /*
