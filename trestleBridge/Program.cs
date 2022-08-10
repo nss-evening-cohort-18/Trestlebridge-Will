@@ -17,8 +17,9 @@ static void DisplayBanner()
 
 static void Start()
 {
-    Console.ForegroundColor = ConsoleColor.White;
     Console.BackgroundColor = ConsoleColor.DarkMagenta;
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
     Farm Trestlebridge = new Farm();
     bool usingFarm = true;
     while (usingFarm)
