@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trestleBridge.Interfaces;
+using trestleBridge.Models.Facilities;
 
 namespace trestleBridge
 {
     public class Farm
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
+        public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
+        public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
 
         /*
             This method must specify the correct product interface of the
@@ -30,6 +36,26 @@ namespace trestleBridge
         public void AddGrazingField(GrazingField field)
         {
             GrazingFields.Add(field);
+        }
+
+        public void AddNaturalField(NaturalField field)
+        {
+            NaturalFields.Add(field);
+        }
+
+        public void AddPlowedField(PlowedField field)
+        {
+            PlowedFields.Add(field);
+        }
+
+        public void AddDuckHouse(DuckHouse field)
+        {
+            DuckHouses.Add(field);
+        }
+
+        public void AddChickenHouse(ChickenHouse field)
+        {
+            ChickenHouses.Add(field);
         }
 
         public override string ToString()
