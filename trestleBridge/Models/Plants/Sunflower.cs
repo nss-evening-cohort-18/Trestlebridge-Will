@@ -19,7 +19,7 @@ namespace trestleBridge.Models.Plants
             }
         }
         public double WaterPerDay { get; set; } = 4.7;
-        public object Type { get; } = "Sesame";
+        public object Type { get; } = "Sunflower";
         public void Absorb()
         {
             Console.WriteLine($"Sunflower plants {this._shortId} just absorbed {this.WaterPerDay} gallons of water");
