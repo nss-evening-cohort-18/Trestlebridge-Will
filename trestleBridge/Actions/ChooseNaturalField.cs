@@ -12,7 +12,7 @@ namespace trestleBridge.Actions
         public static void CollectInput(Farm farm, IFlower plant)
         {
             // Console.Clear();
-            for (int i = 0; i < farm.GrazingFields.Count; i++)
+            for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Natural Field");
             }
@@ -23,7 +23,7 @@ namespace trestleBridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            farm.GrazingFields[choice].AddResource(plant);
+            farm.NaturalFields[choice].AddResource(plant);
 
             /*
                 Couldn't get this to work. Can you?
