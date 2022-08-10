@@ -7,7 +7,7 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Plants
 {
-    internal class Sesame : IFlower
+    internal class Sesame : IFlower, IResource
     {
         private Guid _id = Guid.NewGuid();
         private double _seedsProduced = 18.25;
@@ -19,7 +19,7 @@ namespace trestleBridge.Plants
             }
         }
         public double WaterPerDay { get; set; } = 5.4;
-        public string Type { get; } = "Sesame";
+        public object Type { get; } = "Sesame";
         public void Absorb()
         {
             Console.WriteLine($"Sesame plants {this._shortId} just absorbed {this.WaterPerDay} gallons of water");
@@ -30,7 +30,7 @@ namespace trestleBridge.Plants
         }
         public override string ToString()
         {
-            return $"Sesame plants {this._shortId}. Sesame!";
+            return $"Sesame plants {this._shortId}. Open!";
         }
     }
 }

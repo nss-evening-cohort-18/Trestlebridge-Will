@@ -8,6 +8,6 @@ namespace trestleBridge.Interfaces
 {
     public interface IResource
     {
-
+        object Type { get; }
     }
 }

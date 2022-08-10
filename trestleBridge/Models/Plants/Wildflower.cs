@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Plants
 {
-    internal class Wildflower
+    internal class Wildflower : IFlower, IResource
     {
         private Guid _id = Guid.NewGuid();
         private double _seedsProduced = 36.1;
@@ -18,7 +19,7 @@ namespace trestleBridge.Models.Plants
             }
         }
         public double WaterPerDay { get; set; } = 3.8;
-        public string Type { get; } = "Wildflower";
+        public object Type { get; } = "Wildflower";
         public void Absorb()
         {
             Console.WriteLine($"Wildflower plants {this._shortId} just absorbed {this.WaterPerDay} gallons of water");
@@ -29,7 +30,7 @@ namespace trestleBridge.Models.Plants
         }
         public override string ToString()
         {
-            return $"Sunflower plants {this._shortId}. Wild!";
+            return $"Sunflower plants {this._shortId}. Yeehaw!";
         }
     }
 }
