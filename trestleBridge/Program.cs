@@ -1,4 +1,5 @@
-﻿using trestleBridge.Actions;
+﻿using trestleBridge;
+using trestleBridge.Actions;
 using trestleBridge.Models;
 
 static void DisplayBanner()
@@ -19,7 +20,8 @@ static void Start()
     Console.ForegroundColor = ConsoleColor.White;
     Console.BackgroundColor = ConsoleColor.DarkMagenta;
     Farm Trestlebridge = new Farm();
-    while (true)
+    bool usingFarm = true;
+    while (usingFarm)
     {
         DisplayBanner();
         Console.WriteLine("1. Create Facility");
@@ -41,6 +43,11 @@ static void Start()
             DisplayBanner();
             PurchaseStock.CollectInput(Trestlebridge);
         }
+        else if (option == "3")
+        {
+            DisplayBanner();
+            PurchaseSeeds.CollectInput(Trestlebridge);
+        }
         else if (option == "4")
         {
             DisplayBanner();
@@ -51,7 +58,8 @@ static void Start()
         }
         else if (option == "5")
         {
-            Console.WriteLine("Today is a great day for farming");
+            Console.WriteLine("Today was a great day for farming");
+            usingFarm = false;
 
             break;
         }
