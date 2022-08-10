@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trestleBridge.Interfaces
 {
-    public interface ISeedProducing
+    public interface ISeedProducing : IResource
     {
         double Harvest();
     }

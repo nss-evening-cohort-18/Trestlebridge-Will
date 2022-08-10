@@ -7,7 +7,7 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Animals
 {
-    public class Chicken : IResource, IGrazing, IMeatProducing
+    public class Chicken : IGrazing, IMeatProducing
     {
         private Guid _id = Guid.NewGuid();
         //on the livestock table in the readme it is 7 / .5kg / 1.7kg but i need to check how to do a range
