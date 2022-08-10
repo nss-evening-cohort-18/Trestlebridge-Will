@@ -23,7 +23,7 @@ namespace trestleBridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            farm.NaturalFields[choice].AddResource(plant);
+            farm.NaturalFields[choice - 1].AddResource(plant);
 
             /*
                 Couldn't get this to work. Can you?
