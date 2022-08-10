@@ -8,7 +8,7 @@ namespace trestleBridge.Actions
 		
             public static void CollectInput(Farm farm, IGrazing animal)
             {
-                // Console.Clear();
+                Console.Clear();
                 for (int i = 0; i < farm.DuckHouses.Count; i++)
                 {
                     Console.WriteLine($"{i + 1}. Duck House");

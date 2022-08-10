@@ -11,7 +11,7 @@ namespace trestleBridge.Actions
     {
         public static void CollectInput(Farm farm, IFlower plant)
         {
-            // Console.Clear();
+            Console.Clear();
             for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Natural Field");
