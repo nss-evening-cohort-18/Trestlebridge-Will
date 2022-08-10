@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using trestleBridge.Interfaces;
 
-namespace trestleBridge.Plants
+namespace trestleBridge.Models.Plants
 {
     internal class Sesame : IFlower, IResource
     {

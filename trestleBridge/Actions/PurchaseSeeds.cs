@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trestleBridge.Models.Plants;
 
 namespace trestleBridge.Actions
 {
@@ -26,10 +27,10 @@ namespace trestleBridge.Actions
                     ChooseNaturalField.CollectInput(farm, new Sesame());
                     break;
                 case 2:
-                    ChooseNaturalField.CollectInput(farm, new SunFlower());
+                    ChooseNaturalField.CollectInput(farm, new Sunflower());
                     break;
                 case 3:
-                    ChooseNaturalField.CollectInput(farm, new WildFlower());
+                    ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
                 default:
                     break;
