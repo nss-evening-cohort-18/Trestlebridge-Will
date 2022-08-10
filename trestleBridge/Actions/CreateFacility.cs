@@ -1,4 +1,5 @@
 ﻿using System;
+using trestleBridge.Models.Facilities;
 
 namespace trestleBridge.Actions
 {
@@ -19,6 +20,18 @@ namespace trestleBridge.Actions
             {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
+                    break;
+                case 2:
+                    farm.AddPlowedField(new PlowedField());
+                    break;
+                case 3:
+                    farm.AddNaturalField(new NaturalField());
+                    break;
+                case 4:
+                    farm.AddChickenHouse(new ChickenHouse());
+                    break;
+                case 5:
+                    farm.AddDuckHouse(new DuckHouse());
                     break;
                 default:
                     break;
