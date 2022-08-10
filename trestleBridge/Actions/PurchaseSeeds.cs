@@ -24,7 +24,6 @@ namespace trestleBridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    if ()
                     ChoosePlowedField.CollectInput(farm, new Sesame());
                     break;
                 case 2:
