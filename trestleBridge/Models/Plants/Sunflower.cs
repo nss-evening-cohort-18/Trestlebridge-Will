@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Plants
 {
-    internal class Sunflower
+    internal class Sunflower : IFlower, IResource
     {
         private Guid _id = Guid.NewGuid();
         private double _seedsProduced = 42.3;
@@ -18,7 +19,7 @@ namespace trestleBridge.Models.Plants
             }
         }
         public double WaterPerDay { get; set; } = 4.7;
-        public string Type { get; } = "Sesame";
+        public object Type { get; } = "Sesame";
         public void Absorb()
         {
             Console.WriteLine($"Sunflower plants {this._shortId} just absorbed {this.WaterPerDay} gallons of water");
