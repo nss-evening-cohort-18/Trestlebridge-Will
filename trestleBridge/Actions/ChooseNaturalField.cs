@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using trestleBridge.Interfaces;
+using trestleBridge.Models.Facilities;
 
 namespace trestleBridge.Actions
 {
@@ -19,17 +20,23 @@ namespace trestleBridge.Actions
             Console.WriteLine();
             // How can I output the type of animal chosen here?
             Console.WriteLine($"Place {plant.Type.ToString().ToLower()} where?");
-
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
-
-            farm.NaturalFields[choice - 1].AddResource(plant);
-
+            if (farm.NaturalFields[choice -1].Capacity == farm.NaturalFields[choice - 1].OccupiedSpace())
+            {
+                Console.WriteLine($@"**** That facililty is not large enough ****
+****     Please choose another one      ****");
+                Console.ReadLine();
+            }
+            else
+            {
+                farm.NaturalFields[choice - 1].AddResource(plant);
+            }
+        }
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
              */
             // farm.PurchaseResource<IGrazing>(animal, choice);
-        }
     }
 }

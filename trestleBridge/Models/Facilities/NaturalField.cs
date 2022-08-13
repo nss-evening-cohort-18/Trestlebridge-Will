@@ -13,7 +13,6 @@ namespace trestleBridge.Models.Facilities
         private Guid _id = Guid.NewGuid();
 
         private List<IFlower> _flowers = new List<IFlower>();
-
         public double Capacity
         {
             get
@@ -22,22 +21,27 @@ namespace trestleBridge.Models.Facilities
             }
         }
 
-        public void AddResource(IFlower flower)
+        public void AddResource(IFlower flower) // 6 plants per row
         {
+            if (_capacity == OccupiedSpace())
+            {
+            } else
+            {
             _flowers.Add(flower);
             _flowers.Add(flower);
             _flowers.Add(flower);
             _flowers.Add(flower);
             _flowers.Add(flower);
             _flowers.Add(flower);
+            }
         }
 
-        public void AddResource(List<IFlower> flowers)
+        public void AddResource(List<IFlower> flowers) // adds one row to the list
         {
             _flowers.Add((IFlower)flowers);
         }
 
-        public double OccupiedSpace()
+        public double OccupiedSpace() //number of rows currently occupied
         {
             return _flowers.Count / 6;
         }
