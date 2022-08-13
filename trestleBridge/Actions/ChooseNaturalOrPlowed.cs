@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using trestleBridge.Interfaces;
+using trestleBridge.Models.Facilities;
 
 namespace trestleBridge.Actions
 {
@@ -12,13 +13,20 @@ namespace trestleBridge.Actions
         public static void CollectInput(Farm farm, IFlower plant)
         {
             Console.Clear();
-            for (int i = 0; i < farm.NaturalFields.Count; i++)
+            List<IFacility<IFlower>> CombinedList = new List<IFacility<IFlower>>();
+            CombinedList.AddRange(farm.NaturalFields);
+            CombinedList.AddRange(farm.PlowedFields);
+            string type = "";
+            for (int i = 0; i < CombinedList.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Natural Field");
-            }
-            for (int i = farm.NaturalFields.Count; i < farm.PlowedFields.Count + farm.NaturalFields.Count + 1; i++)
-            {
-                Console.WriteLine($"{i + 1}. Plowed Field");
+                if (CombinedList[i].GetType() == typeof(NaturalField))
+                {
+                    type = "Natural Field";
+                } else
+                {
+                    type = "Plowed Field";
+                };
+                Console.WriteLine($"{i +1}. {type} {CombinedList[i].OccupiedSpace()} rows of plants");
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?
@@ -26,16 +34,7 @@ namespace trestleBridge.Actions
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
-
-            if (choice <= farm.NaturalFields.Count)
-            {
-                farm.NaturalFields[choice - 1].AddResource(plant);
-            }
-            else if (choice > farm.NaturalFields.Count)
-            {
-                farm.PlowedFields[choice - farm.NaturalFields.Count - 1].AddResource(plant);
-            }
-
+            CombinedList[choice - 1].AddResource(plant);
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.

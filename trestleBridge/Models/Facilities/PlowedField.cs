@@ -24,15 +24,22 @@ namespace trestleBridge.Models.Facilities
 
         public void AddResource(IFlower flower)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+            _flowers.Add(flower);
+            _flowers.Add(flower);
+            _flowers.Add(flower);
+            _flowers.Add(flower);
+            _flowers.Add(flower);
         }
 
         public void AddResource(List<IFlower> flowers)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+            _flowers.Add((IFlower)flowers);
         }
+        public double OccupiedSpace()
+        {
+            return _flowers.Count / 5;
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

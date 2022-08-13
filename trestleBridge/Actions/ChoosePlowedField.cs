@@ -14,7 +14,7 @@ namespace trestleBridge.Actions
             Console.Clear();
             for (int i = 0; i < farm.PlowedFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Plowed Field");
+                Console.WriteLine($"{i + 1}. Plowed Field ({farm.PlowedFields[i].OccupiedSpace()} rows of plants)");
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?

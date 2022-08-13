@@ -33,6 +33,12 @@ namespace trestleBridge.Models.Facilities
             // TODO: implement this...
             throw new NotImplementedException();
         }
+
+        public double OccupiedSpace()
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
