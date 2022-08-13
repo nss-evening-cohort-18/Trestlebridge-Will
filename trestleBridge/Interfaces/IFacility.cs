@@ -6,5 +6,7 @@
 
         void AddResource(T resource);
 
+        double OccupiedSpace();
+
     }
 }
